@@ -5,3 +5,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
+@font-face {
+  font-family: Aulire-Regular;
+  src: url(../src/fonts/Auliare-Regular.woff);
+}
+@font-face {
+  font-family: Article-regular;
+  src: url(../src/fonts/Article-regular.woff);
+}
+body {
+  font-family: Article-regular;
+}

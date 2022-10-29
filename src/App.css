@@ -1,142 +1,125 @@
-:root{
-    --hero-back-l1:rgb(0, 54, 75);
-    --hero-back-l2:rgb(10, 25, 46);
+:root {
+  --hero-back-l1: rgb(0, 54, 75);
+  --hero-back-l2: rgb(10, 25, 46);
 }
 
-.primaryContainer{
-    padding: 0%;
-    margin: 0%;
+.primaryContainer {
+  padding: 0%;
+  margin: 0%;
 }
-.heroSection{
-    background: linear-gradient(-90deg,var(--hero-back-l1),var(--hero-back-l2));
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-    font-family: 'Josefin Sans', sans-serif;
-    
-}
-.brandName{
-    font-family: 'Anton', sans-serif;
-    letter-spacing: 8px;
-}
-.herSec2{
-    padding-top:20px;
+.heroSection {
+  background: linear-gradient(-90deg, var(--hero-back-l1), var(--hero-back-l2));
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-.HeroTextSec{
-    padding-top: 20px;
-    text-align: center;
-    color:white;
+.HeroTextSec {
+  padding-top: 20px;
+  text-align: center;
+  color: white;
 }
-.IamHeroText1{
-    font-size: 1.4rem;
-    font-weight: 700;
+.IamHeroText1 {
+  font-size: 1.4rem;
+  font-weight: 700;
 }
-.HireMe{
-    font-size: 1.3rem;
-    color: aquamarine;
-    background: transparent;
-    border: 1.5px solid white;
-    border-radius: 18px;
-    margin-inline: 12px;
-    padding: 5px 20px;
-    border-inline: 5px;
-    -moz-transition: all 0.3 ease-in-out;
-    transition: all 0.3 ease-in-out;
-    
-
+.HireMe {
+  font-size: 1.3rem;
+  color: aquamarine;
+  background: transparent;
+  border: 1.5px solid white;
+  border-radius: 18px;
+  margin-inline: 12px;
+  padding: 5px 20px;
+  border-inline: 5px;
+  -moz-transition: all 0.3 ease-in-out;
+  transition: all 0.3 ease-in-out;
 }
-.HireMe:hover{
-    -moz-transform:  translateY(-5px) ;
-    transform: translateY(-5px) ;
-    background-color: aquamarine;
-    color: black;
+.HireMe:hover {
+  -moz-transform: translateY(-5px);
+  transform: translateY(-5px);
+  background-color: aquamarine;
+  color: black;
 }
-.GetResume{
-    font-size: 1.3rem;
-    color: aquamarine;
-    background: transparent;
-    border: 1.5px solid white;
-    border-radius: 18px;
-    margin-inline: 12px;
-    padding: 5px 20px;
-    border-inline: 5px;
-    -moz-transition: all 0.6 ease-in-out;
-    transition: all 0.3 ease-in-out;
+.GetResume {
+  font-size: 1.3rem;
+  color: aquamarine;
+  background: transparent;
+  border: 1.5px solid white;
+  border-radius: 18px;
+  margin-inline: 12px;
+  padding: 5px 20px;
+  border-inline: 5px;
+  -moz-transition: all 0.6 ease-in-out;
+  transition: all 0.3 ease-in-out;
 }
-.GetResume:hover{
-    -moz-transform:  translateY(-5px) ;
-    transform: translateY(-5px) ;
-    background-color: aquamarine;
-    color: black;
+.GetResume:hover {
+  -moz-transform: translateY(-5px);
+  transform: translateY(-5px);
+  background-color: aquamarine;
+  color: black;
 }
-.IconSpan{
-    background: rgb(2, 2, 34)
+.IconSpan {
+  background: rgb(2, 2, 34);
 }
-.resumeIcons{
-    margin-inline: 24px;
-    margin-block: 24px;
+.resumeIcons {
+  margin-inline: 24px;
+  margin-block: 24px;
 }
 
-.resumeItems{
-    width: 1%;
-    transition: all 0.3s ease-in-out;
-    padding-inline: 24px;
-    padding-block: 24px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    cursor: pointer;
-    color: black;
-    
+.resumeItems {
+  width: 1%;
+  transition: all 0.5s ease-in-out;
+  padding-inline: 24px;
+  padding-block: 24px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+  color: black;
 }
 
-.resumeItems:hover{
-    width: 100%;
-    background: rgb(2, 2, 34);
-    color: aliceblue;
+.resumeItems:hover {
+  width: 100%;
+  background: rgb(2, 2, 34);
+  color: aliceblue;
 }
 
-.selected{
-    background: rgb(2, 2, 34);
-    width: 100%;
-    color: aliceblue;
+.selected {
+  background: rgb(2, 2, 34);
+  width: 100%;
+  color: aliceblue;
 }
-.resumeMainDiv{
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background: linear-gradient(-90deg,var(--hero-back-l1),var(--hero-back-l2));
-    color: #fff;
-    clip-path: polygon(0 11%, 100% 0, 100% 100%, 0% 100%);
+.resumeMainDiv {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: linear-gradient(-90deg, var(--hero-back-l1), var(--hero-back-l2));
+  color: #fff;
+  clip-path: polygon(0 11%, 100% 0, 100% 100%, 0% 100%);
 }
-.resume2nd{
-    margin-top: 45px;
-    background: #fff;
-    box-shadow: 10px 10px 31px 2px #1c1c1c;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    margin-inline: auto;
-    height: 350px;
-}
-.testimonial1{
-    border-radius: 50px 20px 50px 0px;
-    padding: 30px;
-    width: 95%;
-
-}
-.contactSecond{
-    background: linear-gradient(-90deg,var(--hero-back-l1),var(--hero-back-l2));
-    margin-inline: auto;
-    height: 400px;
-}
-.footer{
-    background: linear-gradient(-90deg,var(--hero-back-l1),var(--hero-back-l2));
-    clip-path: polygon(0 0, 100% 27%, 100% 100%, 0% 100%);
-    height: 150px;
-    display: flex;
-    align-items: flex-end;
-    justify-content:flex-end;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 700;
+.resume2nd {
+  margin-top: 45px;
+  background: #fff;
+  box-shadow: 10px 10px 31px 2px #1c1c1c;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-inline: auto;
+  height: 350px;
 }
 
+.contactSecond {
+  background: linear-gradient(-90deg, var(--hero-back-l1), var(--hero-back-l2));
+  margin-inline: auto;
+  height: 400px;
+}
 
+.footer {
+  background: linear-gradient(-90deg, var(--hero-back-l1), var(--hero-back-l2));
+  clip-path: polygon(0 0, 100% 27%, 100% 100%, 0% 100%);
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+}

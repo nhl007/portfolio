@@ -7,20 +7,20 @@ import Resume from './Resume/Resume';
 import Testimonials from './Testimonial/Testimonials';
 import Contact from './Contact/Contact';
 function App() {
-  return(
-    <div id='home' className='primaryContainer'>
-      <div className='heroSection'>
-        <NavBar/>
-        <ImgAndDes/>
-      </div>  
-      <AboutMe/>
+  return (
+    <div id='home' className='primaryContainer scroll-smooth'>
+      <header className='heroSection'>
+        <NavBar />
+        <ImgAndDes />
+      </header>
+      <AboutMe />
       <Resume />
-      <Testimonials/>
-      <Contact/>
-      <div className='footer text-center mt-11'>
+      <Testimonials />
+      <Contact />
+      <footer className='footer text-center mt-11'>
         <p className=' p-5'> Thank You For Visiting... </p>
-      </div>
-  </div>
+      </footer>
+    </div>
   );
 }
 

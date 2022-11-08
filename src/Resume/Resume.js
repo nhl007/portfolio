@@ -2,7 +2,7 @@ import {
   AcademicCapIcon,
   BriefcaseIcon,
   DesktopComputerIcon,
-  PresentationChartLineIcon,
+  // PresentationChartLineIcon,
 } from '@heroicons/react/solid';
 import { useState } from 'react';
 import Education from './History/Education';
@@ -36,26 +36,24 @@ export default function Resume() {
       style={{ marginInline: 'auto' }}
     >
       <div className='flex flex-col text-center'>
-        <span className=' font-extrabold text-6xl underline tracking-wider'>
+        <span className=' text-4xl sm:text-2xl  tracking-wider font-aulire'>
           {' '}
           &emsp;Resume&emsp;
         </span>
-        <span className='text-lg mt-2 font-semibold'>
-          {' '}
-          My formal Bio deatils :
-        </span>
+        <span className='text-lg mt-2 sm:mt-1'> My formal Bio deatils</span>
       </div>
-      <div className='resume2nd w-9/12'>
-        <div className='w-1/3 flex justify-start shadow-xl'>
-          <div className=' flex flex-col IconSpan justify-start'>
+      <div className=' h-[1px] w-[60%] self-center bg-white my-4 sm:my-4 '></div>
+
+      <div className='resume2nd w-[60%] shadow-lg  sm:py-1 sm:shadow-sm'>
+        <div className='w-1/3 sm:w-full flex sm:flex-col justify-start sm:justify-center shadow-xl'>
+          <div className=' flex flex-col sm:flex-row IconSpan justify-start sm:hidden'>
             <AcademicCapIcon className='w-7 h-6 text-white resumeIcons' />
             <BriefcaseIcon className='w-7 h-6 text-white resumeIcons' />
             <DesktopComputerIcon className='w-7 h-6 text-white resumeIcons' />
-            <PresentationChartLineIcon className='w-7 h-6 text-white resumeIcons' />
+            {/* <PresentationChartLineIcon className='w-7 h-6 text-white resumeIcons' /> */}
           </div>
-          <div className='flex flex-col'>
+          <div className='flex flex-col sm:justify-center  sm:flex-row sm:text-xs sm:gap-2 text-center'>
             <div
-              // education === false ? 'resumeItems' : 'resumeItems selected'
               className={`${
                 education ? 'resumeItems selected' : 'resumeItems'
               } w-full `}
@@ -79,19 +77,18 @@ export default function Resume() {
             >
               Programing
             </span>
-            <div></div>
-            <span
+            {/* <span
               className={
                 projects === false ? 'resumeItems' : 'resumeItems selected'
               }
               onClick={() => setResumeState(setProjects, true)}
             >
               Projects
-            </span>
+            </span> */}
           </div>
         </div>
 
-        <div className='w-2/3 flex align-middle'>
+        <div className='w-full flex'>
           {education === true && <Education />}
           {work === true && <Work />}
           {programing === true && <Programing />}

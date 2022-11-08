@@ -98,28 +98,112 @@
 .resume2nd {
   margin-top: 45px;
   background: #fff;
-  box-shadow: 10px 10px 31px 2px #1c1c1c;
+  /* box-shadow: 10px 10px 10px 10px; */
   display: flex;
   justify-content: center;
   flex-direction: row;
   margin-inline: auto;
-  height: 350px;
+  height: auto;
 }
 
-.contactSecond {
+.background__contact {
   background: linear-gradient(-90deg, var(--hero-back-l1), var(--hero-back-l2));
+  clip-path: polygon(0 0, 100% 7%, 100% 100%, 0% 100%);
+}
+.contactSecond {
   margin-inline: auto;
-  height: 400px;
+  height: 500px;
 }
 
 .footer {
   background: linear-gradient(-90deg, var(--hero-back-l1), var(--hero-back-l2));
   clip-path: polygon(0 0, 100% 27%, 100% 100%, 0% 100%);
-  height: 150px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  height: 70px;
   color: #fff;
   font-size: 1rem;
   font-weight: 700;
+}
+
+@media all and (max-width: 700px) {
+  .heroSection {
+    clip-path: none;
+  }
+  .IamHeroText1 {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .HeroTextSec {
+    padding-top: 4px;
+  }
+  .GetResume {
+    border: 1px;
+
+    padding: 4px;
+    font-size: 12px;
+    margin-inline: 2px;
+    border-inline: 1px;
+    border-radius: 5px;
+  }
+  .HireMe {
+    border: 1px;
+    padding: 4px;
+    font-size: 12px;
+    margin-inline: 2px;
+    border-inline: 1px;
+    border-radius: 5px;
+  }
+  .resumeMainDiv {
+    clip-path: none;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .resume2nd {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    justify-content: start;
+  }
+  .resumeItems {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    padding-inline: 5px;
+    padding-block: 5px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    cursor: none;
+    margin-top: 0px;
+  }
+  .selected {
+    width: 100%;
+  }
+  .background__contact {
+    clip-path: none;
+  }
+}
+
+.elementToFadeInAndOut {
+  -webkit-animation: fadeinout 1s linear forwards;
+  -moz-animation: fadeinout 1s linear forwards;
+  -o-animation: fadeinout 1s linear forwards;
+  animation: fadeinout 1s linear forwards;
+}
+
+@-webkit-keyframes fadeinout {
+  0%,
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinout {
+  0%,
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

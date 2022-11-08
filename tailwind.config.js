@@ -6,9 +6,9 @@ module.exports = {
       aulire: ['Aulire-Regular', 'sans-serif'],
     },
     screens: {
-      sm: { min: '200px', max: '1023px' },
+      sm: { min: '200px', max: '700px' },
       // => @media (min-width: 640px and max-width: 767px) { ... }
-      lg: { min: '1024px', max: '1281px' },
+      lg: { min: '701px', max: '1281px' },
       // => @media (min-width: 1024px and max-width: 1279px) { ... }
 
       xl: { min: '1282px', max: '1535px' },

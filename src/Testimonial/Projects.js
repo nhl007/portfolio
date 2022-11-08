@@ -3,7 +3,7 @@ import SS from './projectList/SS';
 import Email from './projectList/Email';
 import ECommerce from './projectList/ECommerce';
 
-export default function Testimonials() {
+export default function Projects() {
   const [state, setState] = useState({
     prev: 0,
     now: 1,
@@ -17,17 +17,18 @@ export default function Testimonials() {
   return (
     <>
       <div
-        id='testimonial'
-        className=' my-20 flex flex-col justify-center items-center'
+        id='projects'
+        className=' my-20 sm:my-6 flex flex-col justify-center items-center'
       >
         <div className='flex flex-col text-center'>
-          <span className=' font-extrabold text-6xl underline tracking-wider'>
+          <span className=' font-extrabold text-4xl sm:text-2xl tracking-wider font-aulire'>
             &emsp;Projects&emsp;
           </span>
           <span className='text-lg mt-2 font-semibold'>
-            Here are some of my Projects:
+            Here are some of my Projects
           </span>
         </div>
+        <div className=' h-[1px] w-[60%] self-center bg-black my-6 sm:my-4'></div>
         <div className=' flex justify-center items-center'>
           <div
             onClick={() =>
@@ -37,7 +38,7 @@ export default function Testimonials() {
                 next: state.now,
               })
             }
-            className=' text-6xl p-5 shadow-lg hover:bg-slate-500 hover:transition-colors hover:text-white cursor-pointer'
+            className=' sm:hidden  text-6xl sm:text-xl p-5 sm:p4 shadow-lg hover:bg-slate-500 hover:transition-colors hover:text-white cursor-pointer'
           >
             {'<'}
           </div>
@@ -50,11 +51,23 @@ export default function Testimonials() {
                 next: state.prev,
               })
             }
-            className=' text-6xl p-5 shadow-lg hover:bg-slate-500 hover:transition-colors hover:text-white cursor-pointer'
+            className=' sm:hidden text-6xl sm:xl p-5 sm:p-4 shadow-lg hover:bg-slate-500 hover:transition-colors hover:text-white cursor-pointer'
           >
             {'>'}
           </div>
         </div>
+        <button
+          onClick={() =>
+            setState({
+              prev: state.now,
+              now: state.next,
+              next: state.prev,
+            })
+          }
+          className=' lg:hidden xl:hidden py-2 px-4 bg-ss_primary mt-4'
+        >
+          Next -{'>'}
+        </button>
       </div>
     </>
   );

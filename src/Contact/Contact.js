@@ -42,18 +42,19 @@ export default function Contact() {
   };
 
   return (
-    <div id='hireMe' className='flex flex-col w-[100%]'>
+    <div
+      id='hireMe'
+      className='flex flex-col w-[100%] background__contact p-20 sm:p-10'
+    >
       <div className='flex flex-col text-center'>
-        <span className=' font-extrabold text-6xl underline tracking-wider'>
-          {' '}
+        <span className=' text-4xl sm:text-2xl font-aulire tracking-wider text-white'>
           &emsp;Contact Me&emsp;
         </span>
-        <span className='text-lg mt-2 font-semibold'>
-          Let's keep in touch ...
-        </span>
+        <span className='text-lg mt-2 text-white'>Let's keep in touch ...</span>
       </div>
-      <div className='flex flex-row mx-20 my-11 contactSecond shadow-2xl '>
-        <div className=' w-1/2 px-7 justify-center'>
+      <div className=' h-[1px] w-[60%] self-center bg-white my-4 sm:mb-0'></div>
+      <div className='flex flex-row justify-center items-center my-11 sm:my-4 contactSecond shadow-2xl sm:shadow-lg w-[80%] sm:w-full '>
+        <div className=' sm:hidden flex items-center w-1/2 px-7 justify-center'>
           <div className=' m-12 justify-center content-center'>
             <lottie-player
               src='https://assets5.lottiefiles.com/packages/lf20_bt7iqzns.json'
@@ -66,7 +67,11 @@ export default function Contact() {
           </div>
         </div>
 
-        <form ref={form} onSubmit={sendEmail} className=' w-1/2 p-5 text-white'>
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className=' w-1/2 sm:w-[100%] p-5 sm:p-1 text-white'
+        >
           <div className=' p-3 flex flex-col'>
             <label>Name:</label>
             <input
@@ -74,6 +79,7 @@ export default function Contact() {
               placeholder='Enter Your Name: '
               type='text'
               value={Name}
+              required
               onChange={(e) => setName(e.target.value)}
             />
           </div>
@@ -85,13 +91,17 @@ export default function Contact() {
               value={Email}
               onChange={(e) => setEmail(e.target.value)}
               type='email'
+              required
             />
           </div>
           <div className=' p-3 flex flex-col'>
             <label>Message:</label>
             <textarea
+              cols={20}
+              rows={3}
+              required
               placeholder='Enter Your Message :'
-              className=' text-black p-2 mt-2 rounded h-10 max-h-14'
+              className=' text-black p-2 mt-2 rounded'
               value={Message}
               onChange={(e) => setMessage(e.target.value)}
               type='text'
@@ -99,7 +109,7 @@ export default function Contact() {
             <input
               type='submit'
               value='Send Email'
-              className=' my-8 p-3 bg-green-600 cursor-pointer rounded '
+              className=' my-8 sm:mb-2 p-3 bg-green-600 cursor-pointer rounded '
             />
           </div>
         </form>

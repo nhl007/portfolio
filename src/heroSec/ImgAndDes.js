@@ -30,36 +30,38 @@ export default function ImgAndDes() {
     };
   }, []);
   return (
-    <div className='pt-4 flex mx-10'>
-      <div className='w-1/2 p-6 flex flex-col'>
+    <div className='pt-4 sm:pt-2 flex sm:flex-col mx-10 sm:mx-2'>
+      <div className='w-1/2 sm:w-full p-6 sm:p-1 flex flex-col'>
         <div className='flex justify-center flex-col  HeroTextSec'>
           <span className='IamHeroText1'>
-            Hello, I am
-            <span className=' text-3xl text-yellow-400 font-bold font-aulire'>
-              {' '}
-              Asif NIHAL
+            Hello, I am{' '}
+            <span className='tracking-[4px] sm:tracking-tight text-3xl sm:text-xl text-yellow-400 font-bold font-aulire'>
+              Asif Nihal
             </span>
           </span>
-          <span ref={el} className='IamHeroText2 text-3xl h-8 p-2'>
+          <span ref={el} className='IamHeroText2 text-3xl sm:text-lg h-8 p-2'>
             ''
           </span>
-          <span className='IamHeroText3 text-2xl p-4'>
+          <span className='IamHeroText3 text-2xl sm:text-lg p-4 sm:p-1'>
             Full-Stack Web Developper
           </span>
-          <div className='flex flex-row mx-2 my-4 p-4 justify-center'>
-            <a href='#hireMe' className='HireMe mr-2 mt-2'>
+          <div className='flex flex-row mx-2 my-4 sm:my-1 p-4 sm:p-1 justify-center sm:gap-4'>
+            <a href='#hireMe' className='HireMe mr-2 sm:mr-1 mt-2 sm:mt-1'>
               Hire Me
             </a>
-            <a href='#Resume' className='GetResume ml-2 mt-2'>
+            <a href='#Resume' className='GetResume mr-2 sm:mr-1 mt-2 sm:mt-1'>
               Get Resume
             </a>
+            {/* <a href='#Resume' className='GetResume ml-2 mt-2'>
+              Get Resume
+            </a> */}
           </div>
         </div>
       </div>
 
-      <div className='w-1/2 flex justify-center'>
-        <div className='justify-center'>
-          <img alt='HeroImage' src={heroImg} width={350} height={450} />
+      <div className='w-1/2 flex justify-center sm:hidden'>
+        <div className='justify-center '>
+          <img alt='HeroImage' src={heroImg} width='400px' height='400px' />
         </div>
       </div>
     </div>

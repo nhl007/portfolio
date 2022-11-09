@@ -45,7 +45,7 @@ export default function ImgAndDes() {
           <span className='IamHeroText3 text-2xl sm:text-lg p-4 sm:p-1'>
             Full-Stack Web Developper
           </span>
-          <div className='flex flex-row mx-2 my-4 sm:my-1 p-4 sm:p-1 justify-center sm:gap-4'>
+          <div className='flex flex-row mx-2 my-4 sm:mb-2 sm:mt-0 p-4 sm:p-1 justify-center sm:gap-4'>
             <a href='#hireMe' className='HireMe mr-2 sm:mr-1 mt-2 sm:mt-1'>
               Hire Me
             </a>

@@ -28,7 +28,7 @@ export default function Projects() {
             Here are some of my Projects
           </span>
         </div>
-        <div className=' h-[1px] w-[60%] self-center bg-black my-6 sm:my-4'></div>
+        <div className=' h-[1px] w-[60%] sm:w-[80%] self-center bg-black my-6 sm:my-4'></div>
         <div className=' flex justify-center items-center'>
           <div
             onClick={() =>

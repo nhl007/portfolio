@@ -1,18 +1,25 @@
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
-export default function Contact() {
+export default function Contact({ loading }) {
+  const [alert, setAlert] = useState(false);
+  const [green, setGreen] = useState(true);
   const [Name, setName] = useState('');
   const [Email, setEmail] = useState('');
   const [Message, setMessage] = useState('');
 
   //emailJs
 
+  const clearAlert = () => {
+    setTimeout(() => {
+      setAlert(false);
+    }, 2000);
+  };
+
   const form = useRef();
-
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-
+    loading(true);
     var templateParams = {
       name: Name,
       form_name: Email,
@@ -20,7 +27,7 @@ export default function Contact() {
       feedback: Message,
     };
 
-    emailjs
+    await emailjs
       .send(
         'service_43xlgno',
         'template_ge5f1mo',
@@ -29,16 +36,23 @@ export default function Contact() {
       )
       .then(
         function (response) {
+          setGreen(true);
+          loading(false);
+          setAlert(true);
           console.log(
-            'SUCCESSFULLY SEND EMAIL!',
+            'SUCCESSFULLY SEND EMAIL !',
             response.status,
             response.text
           );
         },
         function (error) {
-          console.log('FAILED TO SEND EMAIL...', error);
+          setGreen(false);
+          loading(false);
+          setAlert(true);
+          console.log('FAILED TO SEND EMAIL !', error);
         }
       );
+    clearAlert();
   };
 
   return (
@@ -52,7 +66,7 @@ export default function Contact() {
         </span>
         <span className='text-lg mt-2 text-white'>Let's keep in touch ...</span>
       </div>
-      <div className=' h-[1px] w-[60%] self-center bg-white my-4 sm:mb-0'></div>
+      <div className=' h-[1px] w-[60%] sm:w-[80%] self-center bg-white my-4 sm:mb-0'></div>
       <div className='flex flex-row justify-center items-center my-11 sm:my-4 contactSecond shadow-2xl sm:shadow-lg w-[80%] sm:w-full '>
         <div className=' sm:hidden flex items-center w-1/2 px-7 justify-center'>
           <div className=' m-12 justify-center content-center'>
@@ -111,6 +125,21 @@ export default function Contact() {
               value='Send Email'
               className=' my-8 sm:mb-2 p-3 bg-green-600 cursor-pointer rounded '
             />
+            {alert ? (
+              <div className=' flex items-end justify-center text-center w-full'>
+                <span
+                  className={`${
+                    green ? 'text-green-600' : ' text-red-600'
+                  }  text-xl sm:text-lg `}
+                >
+                  {green
+                    ? 'SUCCESSFULLY SENT EMAIL ...'
+                    : 'FAILED TO SEND EMAIL ...'}
+                </span>
+              </div>
+            ) : (
+              ''
+            )}
           </div>
         </form>
       </div>

@@ -6,16 +6,13 @@ module.exports = {
       aulire: ['Aulire-Regular', 'sans-serif'],
     },
     screens: {
-      sm: { min: '200px', max: '700px' },
+      sm: { min: '200px', max: '1088px' },
       // => @media (min-width: 640px and max-width: 767px) { ... }
-      lg: { min: '701px', max: '1281px' },
+      lg: { min: '1088px', max: '1281px' },
       // => @media (min-width: 1024px and max-width: 1279px) { ... }
 
-      xl: { min: '1282px', max: '1535px' },
+      xl: { min: '1282px' },
       // => @media (min-width: 1280px and max-width: 1535px) { ... }
-
-      '2xl': { min: '1536px' },
-      // => @media (min-width: 1536px) { ... }
     },
     extend: {
       colors: {

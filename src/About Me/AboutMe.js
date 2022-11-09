@@ -19,7 +19,7 @@ export default function AboutMe() {
   const graphQl =
     'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/2048px-GraphQL_Logo.svg.png';
   return (
-    <div id='aboutMee' className='my-[100px] sm:my-[24px] flex flex-col p-6 '>
+    <div id='aboutMee' className='my-[100px] sm:my-[8px] flex flex-col p-6 '>
       <div className='flex flex-col text-center'>
         <span className=' font-extrabold text-4xl sm:text-xl tracking-wider font-aulire'>
           Skills and Expertise
@@ -29,7 +29,7 @@ export default function AboutMe() {
           Why Choose Me?{' '}
         </span>
       </div>
-      <div className=' h-[1px] w-[60%] self-center bg-black my-4'></div>
+      <div className=' h-[1px] w-[60%] sm:w-[80%] self-center bg-black my-4'></div>
       <div className=' p-5 sm:p-2 flex flex-row justify-center shadow-xl '>
         <div className=' w-full grid grid-cols-5 sm:grid-cols-5 gap-4 sm:gap-2 place-items-center'>
           <SkillsGrid src={html5} name='Html5' />

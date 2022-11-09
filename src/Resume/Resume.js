@@ -42,7 +42,7 @@ export default function Resume() {
         </span>
         <span className='text-lg mt-2 sm:mt-1'> My formal Bio deatils</span>
       </div>
-      <div className=' h-[1px] w-[60%] self-center bg-white my-4 sm:my-4 '></div>
+      <div className=' h-[1px] w-[60%] sm:w-[80%] self-center bg-white my-4 sm:my-4 '></div>
 
       <div className='resume2nd w-[60%] shadow-lg  sm:py-1 sm:shadow-sm'>
         <div className='w-1/3 sm:w-full flex sm:flex-col justify-start sm:justify-center shadow-xl'>

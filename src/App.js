@@ -4,7 +4,7 @@ import NavBar from './heroSec/NavBar';
 import ImgAndDes from './heroSec/ImgAndDes';
 import AboutMe from './About Me/AboutMe';
 import Resume from './Resume/Resume';
-import Projects from './Testimonial/Projects';
+import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import FloatingMenu from './FloatingMenu';
 import Loading from './Loading';

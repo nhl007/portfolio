@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import menuLogo from './menu.png';
-import menuClose from './close.png';
+import menuLogo from './open1.png';
+import menuClose from './close1 (1).png';
 export default function NavBar() {
   const [menu, setMenu] = useState(false);
   return (
@@ -10,7 +10,7 @@ export default function NavBar() {
           ASIF NIHAL
         </h1>
       </div>
-      <div className=' lg:hidden xl:hidden fixed top-4 right-4'>
+      <div className=' lg:hidden xl:hidden fixed top-[12px] right-4'>
         <div
           className=''
           onClick={() => {
@@ -19,8 +19,8 @@ export default function NavBar() {
         >
           <img
             src={menu ? menuClose : menuLogo}
-            width='20px'
-            height='20px'
+            width='25px'
+            height='25px'
             alt='menu'
           ></img>
         </div>

@@ -9,7 +9,13 @@ export default function ImgAndDes() {
 
   React.useEffect(() => {
     const options = {
-      strings: ['Quick Learner', 'Hard Worker', 'Passionate', 'Coffie Lover'],
+      strings: [
+        ' ',
+        'Quick Learner',
+        'Hard Worker',
+        'Passionate',
+        'Coffie Lover',
+      ],
       StartDElay: 0,
       typeSpeed: 80,
       backSpeed: 60,
@@ -49,7 +55,11 @@ export default function ImgAndDes() {
             <a href='#hireMe' className='HireMe mr-2 sm:mr-1 mt-2 sm:mt-1'>
               Hire Me
             </a>
-            <a href='#Resume' className='GetResume mr-2 sm:mr-1 mt-2 sm:mt-1'>
+            <a
+              href='https://res.cloudinary.com/dmuvbmfaa/image/upload/v1668374117/Asif_Nihal_2_li3z83.pdf'
+              download={`Nihal'sResume.pdf`}
+              className='GetResume mr-2 sm:mr-1 mt-2 sm:mt-1'
+            >
               Get Resume
             </a>
             {/* <a href='#Resume' className='GetResume ml-2 mt-2'>
